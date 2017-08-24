@@ -1,25 +1,51 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<html>
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/main.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Weather</title>
+  <meta name="description" content="Simple weather app">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
 
+<body>
 
+  <!-- logo -->
+  <!-- form: input text="text", button -->
+  <!-- city name -->
+  <!-- current time -->
+  <!-- temp: current, high, low (F/C)-->
+  <!-- image for weather -->
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="js/current.js"></script>
-        <!--<script src="js/forecast.js"></script>-->
-    </body>
+  <form class="search">
+    <input type="text" class="citysearch" name="find" value="" placeholder="Type a city">
+    <input type="button" class="submit" name="submit" value="Submit">
+    <input type="radio" name="uom" value="c" checked="checked"><label for="c">&deg;C</label>
+    <input type="radio" name="uom" value="f"><label for="f"> &deg;F</label>
+  </form>
+
+  <h1 id="city"></h1>
+
+  <ul class="temp">
+    <div class="col">
+      <li class="curr large"></li>
+    </div>
+    <div class="col">
+      <li class="high small"></li>
+      <li class="low small"></li>
+    </div>
+  </ul>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/current.js"></script>
+</body>
+
 </html>
